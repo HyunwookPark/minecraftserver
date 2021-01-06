@@ -1,0 +1,9 @@
+version: '2'
+services:
+  server:
+    container_name: minecraftserver
+    build: ./
+    # tty: true
+    command: java -Xmx1024M -Xms1024M -jar minecraft_server.1.16.4.jar nogui
+    ports:
+      - "0.0.0.0:25565:25565"
